@@ -181,3 +181,48 @@
 //     ],
 //   },
 // ],'Job'));
+
+// function toNumber(binaryStr) {
+//   return binaryStr.split('')
+//     .reverse()
+//     .map(function (val, i) {
+//       if (val === '1') {
+//         return Math.pow(2, i)
+//       }
+//       return 0;
+//     }).reduce(function (aggro, val) {
+//       return aggro + val
+//     }, 0)
+// }
+//
+// alert(toNumber('100101'));
+
+
+// function find(arr, searchText) {
+//   return arr.filter(function (obj) {
+//     const values = Object.values(obj);
+//     for (let i = 0; i < values.length; i++) {
+//       if (("" + values[i]).search(searchText) !== -1) {
+//         return true;
+//       }
+//     }
+//     return false;
+//   });
+// }
+//
+// alert(JSON.stringify(find([
+//   { title: 'White Fang', author: 'Jack London' },
+//   { title: 'The Adventures of Tam Sawyer', author: 'Mark Twain' },
+// ], 'Twain')));
+
+// function magic(obj) {
+//   return Object.keys(obj).reduce(function (aggro, key) {
+//     aggro[obj[key]] = key;
+//     return aggro;
+//   }, {});
+// }
+//
+// alert(JSON.stringify(magic({
+//   firstName: 'Michael',
+//   lastName: 'Jackson',
+// }), undefined, 2));
