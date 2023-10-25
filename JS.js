@@ -226,3 +226,25 @@
 //   firstName: 'Michael',
 //   lastName: 'Jackson',
 // }), undefined, 2));
+
+
+// function pow(num1, num2) {
+//   let result = num1;
+//   while (num2 > 1) {
+//     result *= num1;
+//     num2--;
+//   }
+//   return result;
+// }
+//
+// alert(pow(5, 4));
+
+
+function reverse(num) {
+  const numStr = '' + num;
+  const newReversNumber = numStr.split('').reverse().join('');
+
+  return +newReversNumber;
+}
+
+alert(reverse(123));
