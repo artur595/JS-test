@@ -240,11 +240,78 @@
 // alert(pow(5, 4));
 
 
-function reverse(num) {
-  const numStr = '' + num;
-  const newReversNumber = numStr.split('').reverse().join('');
+// function reverse(num) {
+//   const numStr = '' + num;
+//   const newReversNumber = numStr.split('').reverse().join('');
+//
+//   return +newReversNumber;
+// }
+//
+// alert(reverse(123));
 
-  return +newReversNumber;
-}
 
-alert(reverse(123));
+// function alertFreq(str) {
+//   const obj = str.split("").reduce(function (aggro, val) {
+//     if (aggro[val] === undefined) {
+//       aggro[val] = 1;
+//     } else {
+//       aggro[val]++;
+//     }
+//     return aggro;
+//   }, {});
+//   Object.keys(obj).forEach(function (key) {
+//     alert(`${key} : ${obj[key]}`);
+//   })
+// }
+//
+// alertFreq('hello-world');
+
+// function max(arr) {
+//   let maxValue = arr[0];
+//   for (let i = 1; i < arr.length; i++) {
+//     const val = arr[i];
+//     if (val > maxValue) {
+//       maxValue = val;
+//     }
+//   }
+//   return maxValue
+// }
+//
+// alert(max([5, 10, 33, 45, 400]));
+
+// function forEach(arr, func) {
+//   function loop(i) {
+//     if (i >= arr.length) {
+//       return;
+//     }
+//     func(arr[i], i);
+//     loop(i + 1);
+//   }
+//
+//   loop(0);
+// }
+//
+// forEach([5, 4, 3], function (val, i) {
+//   alert(val + ' at index ' + i)
+// });
+
+
+// function pow(x, y) {
+//   if (y === 0) {
+//     return 1;
+//   }
+//   return x * pow(x, y - 1);
+// }
+//
+// alert(pow(5, 3));
+
+// function sum(arr) {
+//   return arr.reduce(function (aggro, val) {
+//     if (Array.isArray(val)) {
+//       return aggro + sum(val);
+//     }
+//     return aggro + val;
+//   }, 0);
+// }
+//
+// alert(sum([4, 3, [8, 2], [3, 6, [9, 12, 33], 6], 7, 8, 9]));
