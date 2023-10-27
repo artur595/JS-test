@@ -315,3 +315,52 @@
 // }
 //
 // alert(sum([4, 3, [8, 2], [3, 6, [9, 12, 33], 6], 7, 8, 9]));
+
+
+// const a = {
+//   age: 25,
+//   foo: function (arr) {
+//     arr.forEach(function (val) {
+//       alert(this.age + val);
+//     }.bind(this));
+//   },
+// }
+//
+// a.foo([22]);
+
+
+// function zoo() {
+//   alert(this.age)
+// }
+//
+// const b = {
+//   age: 44,
+// }
+//
+// const a = {
+//   age: 23,
+//   foo: zoo.bind(b),
+// }
+//
+// a.foo();
+
+// const a = {
+//   name: 'John',
+//   f: function () {
+//     alert(this.name);
+//   }
+// }
+//
+// const b = {
+//   name: 'Mike',
+// }
+//
+// a.f.call(b);
+
+// function Person() {
+//   this.name = 'Nike';
+//   this.age = 28;
+// }
+//
+// const a = new Person();
+// alert(JSON.stringify(a, undefined, 2));
