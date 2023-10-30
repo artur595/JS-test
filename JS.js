@@ -364,3 +364,33 @@
 //
 // const a = new Person();
 // alert(JSON.stringify(a, undefined, 2));
+
+
+// const a = {
+//   age: 22,
+//   name: 'John',
+//   getName: function () {
+//     return this.name;
+//   },
+//   getAge: () => this.age,
+// }
+//
+// alert(a.getName());
+// alert(a.getAge());
+
+// const f = () => this.name;
+//
+// const a = {
+//   name: 'Mike',
+// }
+//
+// alert(f.call(a))
+
+
+// let a = [5, 40, 29, 44, 33];
+//
+// function transform(arr) {
+//   return arr.map(val => val + 1).filter(val => val % 2 === 0);
+// }
+//
+// alert(transform(a));
