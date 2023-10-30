@@ -394,3 +394,113 @@
 // }
 //
 // alert(transform(a));
+
+//
+// let x = 7;
+//
+// function a(y) {
+//   return x + y;
+// }
+//
+// function b(z) {
+//   let x = 99;
+//   return z(4);
+// }
+//
+// alert(b(a));
+
+//
+// function a(x) {
+//   return (y) => x + y;
+// }
+//
+// alert(a(2)(4));
+
+// function Cat() {
+//   let numLives = 7;
+//   let name = 'Jack';
+//
+//   this.age = 5;
+//   this.getName = () => {
+//     return name;
+//   };
+//   this.getAge = () => {
+//     return this.age;
+//   };
+//   this.catDies = () => {
+//     return numLives--;
+//   };
+//   this.isDead = () => {
+//     return numLives <= 0;
+//   };
+// }
+//
+// let a = new Cat();
+// a.catDies();
+// a.catDies();
+// a.catDies();
+// a.catDies();
+// alert(a.isDead());
+// a.catDies();
+// a.catDies();
+// a.catDies();
+// alert(a.isDead());
+// alert(a.getName());
+// a.age = 99;
+// alert(a.age);
+
+
+// function job(state) {
+//   return new Promise(function(resolve, reject) {
+//     if (state) {
+//       resolve('success');
+//     } else {
+//       reject('error');
+//     }
+//   });
+// }
+//
+// job(true).then(function(data) {
+//   console.log(data);
+//   return job(true);
+// }).then(function(data) {
+//   if (data !== 'victory') {
+//     throw 'Defeat';
+//   }
+//   return job(true);
+// }).then(function(data) {
+//   console.log(data);
+// }).catch(function(error) {
+//   console.log(error);
+//   return job(false);
+// }).then(function(data) {
+//   console.log(data);
+//   return job(true);
+// }).catch(function(error) {
+//   console.log(error);
+//   return 'Error caught';
+// }).then(function(data) {
+//   console.log(data);
+//   return new Error('test');
+// }).then(function(data) {
+//   console.log('Success:', data.message);
+// }).catch(function(data) {
+//   console.log('Error:', data.message);
+// });
+
+// function sumPairExists(a, b, v) {
+//   const obj = b.reduce(function (aggro, value) {
+//     aggro[value] = true;
+//     return aggro;
+//   }, {});
+//
+//   for (let i = 0; i < a.length; i++) {
+//     const target = v - a[i];
+//     if (obj[target] === true) {
+//       return true
+//     }
+//   }
+//   return false;
+// }
+//
+// alert(sumPairExists([4, 2, 5, 60, 10, 915], [67, 12, 0, 2, 1, 0], 22));
