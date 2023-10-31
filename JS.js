@@ -504,3 +504,104 @@
 // }
 //
 // alert(sumPairExists([4, 2, 5, 60, 10, 915], [67, 12, 0, 2, 1, 0], 22));
+
+
+// function firstNonRepeatingCharacter(str) {
+//   const arr = str.split("");
+//   const obj = arr.reduce(function (aggro, val) {
+//     if (aggro[val] === undefined) {
+//       aggro[val] = 1;
+//     } else {
+//       aggro[val]++;
+//     }
+//     return aggro;
+//   }, {})
+//   const keys = Object.keys(obj);
+//   for (let i = 0; i < keys.length; i++) {
+//     const key = keys[i];
+//     if (obj[key] === 1) {
+//       return key;
+//     }
+//   }
+// }
+//
+// alert(firstNonRepeatingCharacter('abcabiefc'));
+
+
+// let input = [
+//   [1, 1, 0, 0, 0],
+//   [0, 1, 0, 0, 1],
+//   [1, 0, 0, 1, 1],
+//   [0, 0, 0, 0, 0],
+//   [1, 0, 1, 1, 0],
+// ];
+//
+// largestIsland(input);
+//
+// function largestIsland(board) {
+//   let id = 2;
+//   let map = {};
+//   for (let i = 0; i < board.length; i++) {
+//     const row = board[i];
+//     for (let j = 0; j < row.length; j++) {
+//       const value = row[j];
+//       if (value === 1) {
+//         const size = computeSize(board, i, j, id);
+//         map[id] = size;
+//         id++;
+//       }
+//     }
+//   }
+//   let max = 0;
+//   for (let i = 0; i < board.length; i++) {
+//     const row = board[i];
+//     for (let j = 0; j < row.length; j++) {
+//       const value = row[j];
+//       if (value === 0) {
+//         const size = computeIslands(board, i, j, map);
+//         if (size > max) {
+//           max = size;
+//         }
+//       }
+//     }
+//   }
+//   return max;
+// }
+//
+// function computeIslands(board, i, j, map) {
+//   let size = 1;
+//   let islands = {};
+//
+//   if (i - 1 >= 0 && board[i - 1][j] > 1) {
+//     const id = board[i - 1][j];
+//     islands[id] = map[id];
+//   }
+//   if (i + 1 < board.length && board[i + 1][j] > 1) {
+//     const id = board[i + 1][j];
+//     islands[id] = map[id];
+//   }
+//
+//   if (j - 1 >= 0 && board[i][j - 1] > 1) {
+//     const id = board[i][j - 1];
+//     islands[id] = map[id];
+//   }
+//
+//   if (j + 1 < board[i].length && board[i][j + 1] > 1) {
+//     const id = board[i][j + 1];
+//     islands[id] = map[id];
+//   }
+//
+//   return 1 + Object.values(islands).reduce((aggro, val) => aggro + val, 0);
+// }
+//
+// function computeSize(board, i, j, id) {
+//   if (i < 0 || j < 0 || i >= board.length || j >= board[i].length || board[i][j] !== 1) {
+//     return 0;
+//   }
+//   board[i][j] = id;
+//
+//   return 1 + computeSize(board, i, j - 1, id) +
+//     computeSize(board, i, j + 1, id) +
+//     computeSize(board, i - 1, j, id) +
+//     computeSize(board, i + 1, j, id);
+// }
